@@ -1,41 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Farmer Market</title>
+    <title>Local Farmer Market</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>🌾 Farmer Market</h1>
-    <p>Local Farmer Market Information System</p>
+    <h1>🌾 Local Farmer Market</h1>
+    <p>Connecting Farmers Directly With Customers</p>
 </header>
 
-<section>
-    <h2>Available Products</h2>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+</nav>
 
-    <div class="product">
-        <h3>🌾 Rice</h3>
-        <p>Price: ₹2500 / Quintal</p>
-        <p>Market: Hubballi</p>
+<section id="home" class="hero">
+    <h2>Welcome to Farmer Market 👨‍🌾</h2>
+    <p>Find local agricultural products and market prices easily.</p>
+</section>
+
+<section id="products">
+
+    <h2>🌱 Available Products</h2>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search crop..."
+        onkeyup="searchCrop()"
+    >
+
+    <div class="products">
+
+        <div class="product" data-name="rice">
+            <div class="emoji">🌾</div>
+            <h3>Rice</h3>
+            <p>💰 ₹2500 / Quintal</p>
+            <p>📍 Hubballi Market</p>
+            <p>👨‍🌾 Farmer: Ravi</p>
+            <button onclick="contactFarmer('Ravi')">
+                Contact Farmer
+            </button>
+        </div>
+
+        <div class="product" data-name="wheat">
+            <div class="emoji">🌾</div>
+            <h3>Wheat</h3>
+            <p>💰 ₹2300 / Quintal</p>
+            <p>📍 Dharwad Market</p>
+            <p>👨‍🌾 Farmer: Suresh</p>
+            <button onclick="contactFarmer('Suresh')">
+                Contact Farmer
+            </button>
+        </div>
+
+        <div class="product" data-name="maize">
+            <div class="emoji">🌽</div>
+            <h3>Maize</h3>
+            <p>💰 ₹2100 / Quintal</p>
+            <p>📍 Gadag Market</p>
+            <p>👨‍🌾 Farmer: Mahesh</p>
+            <button onclick="contactFarmer('Mahesh')">
+                Contact Farmer
+            </button>
+        </div>
+
+        <div class="product" data-name="groundnut">
+            <div class="emoji">🥜</div>
+            <h3>Groundnut</h3>
+            <p>💰 ₹6000 / Quintal</p>
+            <p>📍 Vijayapura Market</p>
+            <p>👨‍🌾 Farmer: Prakash</p>
+            <button onclick="contactFarmer('Prakash')">
+                Contact Farmer
+            </button>
+        </div>
+
+        <div class="product" data-name="tomato">
+            <div class="emoji">🍅</div>
+            <h3>Tomato</h3>
+            <p>💰 ₹1800 / Quintal</p>
+            <p>📍 Belagavi Market</p>
+            <p>👨‍🌾 Farmer: Manjunath</p>
+            <button onclick="contactFarmer('Manjunath')">
+                Contact Farmer
+            </button>
+        </div>
+
+        <div class="product" data-name="onion">
+            <div class="emoji">🧅</div>
+            <h3>Onion</h3>
+            <p>💰 ₹2200 / Quintal</p>
+            <p>📍 Bagalkot Market</p>
+            <p>👨‍🌾 Farmer: Basavaraj</p>
+            <button onclick="contactFarmer('Basavaraj')">
+                Contact Farmer
+            </button>
+        </div>
+
     </div>
 
-    <div class="product">
-        <h3>🌽 Maize</h3>
-        <p>Price: ₹2100 / Quintal</p>
-        <p>Market: Gadag</p>
-    </div>
+</section>
 
-    <div class="product">
-        <h3>🥜 Groundnut</h3>
-        <p>Price: ₹6000 / Quintal</p>
-        <p>Market: Vijayapura</p>
-    </div>
+<section id="about" class="about">
+
+    <h2>📌 About the Project</h2>
+
+    <p>
+        The Local Farmer Market Information System helps farmers
+        and customers find agricultural products, market prices,
+        and local market information.
+    </p>
+
 </section>
 
 <footer>
-    <p>© 2026 Farmer Market System</p>
+    <p>🌾 Supporting Local Farmers</p>
+    <p>© 2026 Local Farmer Market Information System</p>
 </footer>
 
 <script src="script.js"></script>
