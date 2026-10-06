@@ -1,34 +1,21 @@
 function searchCrop() {
+    var input = document.getElementById("search");
+    var filter = input.value.toLowerCase();
 
-    let search = document
-        .getElementById("search")
-        .value
-        .toLowerCase();
+    var products = document.getElementsByClassName("product");
 
-    let products = document.querySelectorAll(".product");
+    for (var i = 0; i < products.length; i++) {
 
-    products.forEach(function(product) {
+        var text = products[i].innerText.toLowerCase();
 
-        let name = product
-            .getAttribute("data-name")
-            .toLowerCase();
-
-        if (name.includes(search)) {
-            product.style.display = "block";
+        if (text.includes(filter)) {
+            products[i].style.display = "block";
         } else {
-            product.style.display = "none";
+            products[i].style.display = "none";
         }
-
-    });
+    }
 }
 
-
 function contactFarmer(name) {
-
-    alert(
-        "Thank you for your interest! 🌾\n\n" +
-        "Farmer: " + name +
-        "\nPlease contact the local market office."
-    );
-
+    alert("Farmer Name: " + name);
 }
