@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f8e9;
+    color: #333;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+.product {
+    background-color: white;
+    width: 280px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px #aaa;
+}
+
+.product h3 {
+    color: #388e3c;
+}
+
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
